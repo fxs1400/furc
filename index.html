@@ -16,7 +16,41 @@
     <h1>join us </h1>
     <form action="https://formsubmit.co/superanimfx@gmail.com" method="POST"><input type="email" name="email" placeholder="email"><br><input type="text" name="name" placeholder="username"><br><input type="date" name="bd" placeholder="birthday"><br><input type="url" name="imgurl" placeholder="image url"><br><button type="submit">jion </button>
                                                                                  </form>
-    <h3>owr faces</h3>
+   <form action="https://formsubmit.co/superanimfx@gmail.com" method="POST"><div class="bbcode-btns">
+    <button type="button" onclick="insertBB('[b]', '[/b]')"><b>B</b></button>
+    <button type="button" onclick="insertBB('[i]', '[/i]')"><i>I</i></button>
+    <button type="button" onclick="insertBB('[u]', '[/u]')"><u>U</u></button>
+    <button type="button" onclick="insertBB('[url]', '[/url]')">Link</button>
+    <button type="button" onclick="insertBB('[img]', '[/img]')">Image</button>
+    <button type="button" onclick="insertBB('[color=red]', '[/color]')">Red</button>
+    <button type="button" onclick="insertBB('[quote]', '[/quote]')">Quote</button>
+    <button type="button" onclick="insertBB('[code]', '[/code]')">Code</button>
+    <button type="button" onclick="insertBB('[list]\n[*]Item1\n[*]Item2\n[/list]', '')">List</button>
+</div>
+<textarea id="bbcode-area" placeholder="اكتب رسالتك هنا..."></textarea>
+
+<script>
+// دالة إدراج كود BBCode
+function insertBB(startTag, endTag) {
+    var textarea = document.getElementById('bbcode-area');
+    var start = textarea.selectionStart;
+    var end = textarea.selectionEnd;
+    var selectedText = textarea.value.substring(start, end);
+
+    // إذا كان الكود لا يحتاج لإغلاق (مثل القوائم)، فقط أضفه في المكان
+    if (!endTag) {
+        textarea.value = textarea.value.substring(0, start) + startTag + textarea.value.substring(end);
+        textarea.focus();
+        textarea.selectionEnd = start + startTag.length;
+    } else {
+        textarea.value = textarea.value.substring(0, start) + startTag + selectedText + endTag + textarea.value.substring(end);
+        textarea.focus();
+        textarea.selectionStart = start + startTag.length;
+        textarea.selectionEnd = start + startTag.length + selectedText.length;
+    }
+}
+</script><button type="submit">share</button></form>
+    </form <h3>owr faces</h3>
     <marquee>
         <img src="https://fxs1400.github.io/furc/h.png" ><img src="https://fxs1400.github.io/furc/s.png"><img src="https://fxs1400.github.io/furc/sc.png" >
         <img src="https://fxs1400.github.io/furc/lv.png" ><img src="https://fxs1400.github.io/furc/li.png" ><img src="k.png">
