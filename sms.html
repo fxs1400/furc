@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <title>llll</title>
+</head>
+<body><script src="https://keepandroidopen.org/banner.js"></script>
+    <img src="https://fxs1400.github.io/furc/logo.png">
+      <header style="background:blue; color:white;"><table><tr><td><details><summary>parks</summary><br><a href="index.html">olhao park</a></details></td><td><details><summary>games</summary><br><a href="https://alexparr.net/games/embed/Scratch/Bug_Trap"><img src="https://alexparr.net/games/graphics/Scratch/bugtrap.png" width="100" height="100">bug trap</a>
+      <br><a href="https://alexparr.net/games/embed/Scratch/Urban"><img src="https://alexparr.net/games/graphics/Scratch/urban.png" width="100" height="100">urban</a>
+       <br><a href="https://alexparr.net/games/embed/Scratch/Matt's_Adventure_Demon"><img src="https://alexparr.net/games/graphics/Scratch/mattdemo.png" width="100" height="100">Matt's Adventure Demon</a>
+        <br><a href="https://alexparr.net/games/embed/Scratch/AOL_Tube_Dash"><img src="https://alexparr.net/games/graphics/Scratch/aoltubedash.png" width="100" height="100">Matt's Adventure Demon</a>
+       <br><a href="https://scratch.mit.edu/projects/1194390509/embed"><img src="https://cdn2.scratch.mit.edu/get_image/project/1194390509_144x108.png" width="100" height="100">1d game</a>
+          <br>
+          <br><a href="https://files.catbox.moe/fvkaqj.swf"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39oeOmrUzVzeW2L3hoeUTsPOJWLwfJetF0Q&s" width="100" height="100">firey candy bar Adventure</a><center><big>my pop-game</big><br><embed width="200" height="100" src="https://alexparr.net/games/embed/superB!T/"></embed></center></details></td><td><details><summary>shop</summary>nothing here</details></td><td><details><summary>account</summary><form action="https://formsubmit.co/unufx30@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value=""> <input type="text" name="Username" placeholder="username" required><br>
+        <input type="email" name="email" placeholder="Email Address" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <br>
+        <input type="date" name="age" placeholder="your age" required><br><p>we allow from 10+</p><br>
+        your best color :<input type="color" name="fav color" required><br>
+              <br>
+        <input type="text" name="conutry" placeholder="your country" required><br>
+        <button type="submit">Join</button>
+    </form></details></td><td><details><summary>forums</summary><iframe src="https://webchat.quakenet.org/?channels=furchat&uio=d4" width="647" height="400"></iframe></details></td><td><details><summary>program</summary> nothing here</details></td><td><a href="mail.htm">contact me</a></td></tr></table></header>
+    <hr><div>
+
+    <h2>pm</h2>
+    
+    <p>Your ID: <b id="my-id">...wait</b></p>
+
+    <input type="text" id="peer-id" placeholder="put your firend">
+    <button onclick="connectToPeer()">call</button>
+
+    <hr>
+
+    <div  style="height: 200px; border: 1px solid #ccc; overflow-y: scroll; padding: 10px;"><div id="chat-box">
+        <i>no massege</i>
+</div>
+  <input type="text" id="message-input" placeholder="massge">
+    <button onclick="sendMessage()">send</button>
+
+    </div>
+
+  
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+
+    <script>
+        const myIdDisplay = document.getElementById('my-id');
+        const chatBox = document.getElementById('chat-box');
+        const peerIdInput = document.getElementById('peer-id');
+        const messageInput = document.getElementById('message-input');
+
+        // 1. إنشاء اتصال Peer جديد
+        const peer = new Peer(); 
+        let connection;
+
+        // عند الحصول على الـ ID الخاص بي من السيرفر
+        peer.on('open', (id) => {
+            myIdDisplay.innerText = id;
+        });
+
+        // 2. استقبال اتصال من صديق
+        peer.on('connection', (conn) => {
+            connection = conn;
+            setupChat();
+            appendMessage("<b>system:</b> you are online");
+        });
+
+        // 3. وظيفة الاتصال بصديق
+        function connectToPeer() {
+            const id = peerIdInput.value;
+            connection = peer.connect(id);
+            setupChat();
+            appendMessage("<b>system:</b> loading to call  " + id);
+        }
+
+        // إعداد استقبال الرسائل
+        function setupChat() {
+            connection.on('data', (data) => {
+                appendMessage("<b>he/him:</b> " + data);
+            });
+        }
+
+        // 4. وظيفة إرسال الرسائل
+        function sendMessage() {
+            const msg = messageInput.value;
+            if (connection && connection.open) {
+                connection.send(msg);
+                appendMessage("<b>me:</b> " + msg);
+                messageInput.value = "";
+            } else {
+                alert("call first");
+            }
+        }
+
+        function appendMessage(text) {
+            chatBox.innerHTML += "<p>" + text + "</p>";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+
+ </div>
+<h3>owr faces</h3>
+    <marquee>
+        <img src="https://fxs1400.github.io/furc/h.png" ><img src="https://fxs1400.github.io/furc/s.png"><img src="https://fxs1400.github.io/furc/sc.png" >
+        <img src="https://fxs1400.github.io/furc/lv.png" ><img src="https://fxs1400.github.io/furc/li.png" ><img src="k.png">
+        <img src="https://fxs1400.github.io/furc/an.png" ><img src="https://fxs1400.github.io/furc/cut.png" ><img src="https://fxs1400.github.io/furc/sp.png" ><img src="https://fxs1400.github.io/furc/vp.png"><img src="https://fxs1400.github.io/furc/cry.png" alt="">
+    </marquee>
+    <style>
+      body {
+       background: #ff1f00;   
+      }
+        #io {
+  position: absolute;
+ right: 100px;
+ left: 200px;
+ top: 350px;
+ bottom: 120px;
+        }
+      #pl {
+  position: absolute;
+ right: 100px;
+ left: 105px;
+}
+ #fxs {
+ width: 720;
+ height: 300;
+     background: url("https://fxs1400.github.io/furc/1.png");
+ }
+ h3 {
+     background: #556dff;
+     color: #1a214e;
+ }
+         header a{
+color:white;
+              
+         }
+    </style>
+</body>
+</html><!-- 
+h.png
+s.png
+sc.png
+li.png
+lv.png 
+sp.png
+cut.png
+an.png
+vp.png-->
